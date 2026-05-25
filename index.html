@@ -83,7 +83,7 @@
 
   <div class="menu-container">
 
-    <!-- Card 1 -->
+   <!-- Card 1 -->
     <div class="card reveal">
       <img src="https://unsplash.com/photos/a-cappuccino-on-a-saucer-on-a-tiled-floor-ujIHNKDzSwE" alt="Coffee">
 
@@ -105,7 +105,7 @@
       </p>
     </div>
 
-    <!-- Card 3 -->
+   <!-- Card 3 -->
     <div class="card reveal">
       <img src="https://unsplash.com/photos/a-piece-of-fruit-sitting-on-top-of-a-cutting-board-rSRrCpTHgGI" alt="Dessert">
 
@@ -119,66 +119,8 @@
   </div>
 
 </section>
-      <script>
 
-window.addEventListener('scroll', reveal);
-
-function reveal(){
-
-  let reveals = document.querySelectorAll('.reveal');
-
-  for(let i = 0; i < reveals.length; i++){
-
-    let windowHeight = window.innerHeight;
-
-    let revealTop = reveals[i].getBoundingClientRect().top;
-
-    let revealPoint = 100;
-
-    if(revealTop < windowHeight - revealPoint){
-
-      reveals[i].classList.add('active');
-
-    }
-
-  }
-
-}
-
-</script>
-
- <script>
-
-/* Music Toggle */
-
-const music = document.getElementById('bg-music');
-
-const musicBtn = document.getElementById('music-btn');
-
-let isPlaying = false;
-
-musicBtn.addEventListener('click', () => {
-
-  if(isPlaying){
-
-    music.pause();
-
-    musicBtn.innerHTML = '🎵Play Music';
-
-  } else {
-
-    music.play();
-
-    musicBtn.innerHTML = '⏸Pause Music';
-
-  }
-
-  isPlaying = !isPlaying;
-
-});
-
-</script>
-      <!-- Background Music -->
+ <!-- Background Music -->
 <audio id="bg-music" loop>
   <source src="lofi.mp3" type="audio/mp3">
 </audio>
@@ -186,7 +128,7 @@ musicBtn.addEventListener('click', () => {
 <!-- Music Toggle Button -->
 <button id="music-btn">
   🎵Play Music
-</button>
-</body>
-</html>
+  </button>
+  </body>
+  </html>
      
