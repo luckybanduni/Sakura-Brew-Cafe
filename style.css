@@ -1,0 +1,614 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: 'Baloo Paaji 2', cursive;
+    background: #0d0d0d;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    position: fixed;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+/* Logo */
+nav h1 {
+    font-size: 32px;
+
+    color: #f87bdd;
+
+    text-shadow:
+        0 0 5px #f87bdd,
+        0 0 10px #f87bdd,
+        0 0 20px #f87bdd;
+}
+
+/* Nav Links */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #f87bdd;
+
+    text-shadow:
+        0 0 5px #f87bdd,
+        0 0 15px #f87bdd;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+        url('https://unsplash.com/photos/pink-cherry-blossom-tree-under-blue-sky-during-daytime-ab-Yr2Rq2aI');
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+/* Hero Content Box */
+.hero-content {
+    max-width: 700px;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 0 15px rgba(255, 79, 216, 0.3),
+        0 0 40px rgba(255, 79, 216, 0.2);
+}
+
+/* Main Heading */
+.hero h2 {
+    font-size: 72px;
+    
+    margin-bottom: 20px;
+
+    line-height: 1.1;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #f87bdd,
+        0 0 20px #f87bdd,
+        0 0 40px #f87bdd;
+}
+.hero{
+   padding-top:100px;
+}
+
+/* Paragraph */
+.hero p {
+    font-size: 22px;
+
+    color: #dddddd;
+
+    margin-bottom: 35px;
+
+    line-height: 1.6;
+}
+
+/* Button */
+button {
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #f87bdd;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 0 10px #f87bdd,
+        0 0 20px #f87bdd;
+}
+
+/* Button Hover */
+button:hover {
+    transform: scale(1.08);
+
+    background: #f87bdd;
+
+    box-shadow:
+        0 0 20px #f87bdd,
+        0 0 50px #f87bdd;
+}
+
+/* Menu Section */
+.menu {
+    padding: 120px 60px;
+
+    background: #111;
+
+    text-align: center;
+}
+
+/* Section Title */
+.menu h2 {
+    font-size: 50px;
+
+    margin-bottom: 60px;
+
+    color: #f87bdd;
+
+    text-shadow:
+        0 0 10px #f87bdd,
+        0 0 25px #f87bdd;
+}
+
+/* Menu Cards Layout */
+.menu-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+}
+
+/* Card Design */
+.card {
+    background: #1b1b1b;
+
+    width: 320px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.4s;
+
+    box-shadow:
+        0 0 10px rgba(255, 79, 216, 0.2);
+}
+
+/* Card Hover */
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 0 20px rgba(255, 79, 216, 0.5),
+        0 0 40px rgba(255, 79, 216, 0.3);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 28px;
+
+    margin: 20px 0 10px;
+
+    color: #ff4fd8;
+}
+
+/* Card Paragraph */
+.card p {
+    color: #ccc;
+
+    padding: 0 20px 30px;
+
+    line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media(max-width: 900px) {
+
+    /* Navbar */
+    nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    /* Hero Section */
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero-content {
+        padding: 35px;
+    }
+
+    /* Menu Section */
+    .menu {
+        padding: 100px 20px;
+    }
+
+    .menu h2 {
+        font-size: 40px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+/* Extra Small Screens */
+@media(max-width: 500px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .menu h2 {
+        font-size: 32px;
+    }
+
+}
+
+/* =========================
+   REALISTIC SAKURA PETALS
+========================= */
+
+.petals {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+/* Petal Style */
+.petals span {
+    position: absolute;
+
+    top: -10%;
+
+    background: #f43a87;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius:
+        70% 0 70% 0;
+
+    opacity: 0.9;
+
+    filter: blur(0.3px);
+
+    animation:
+        sakuraFall linear infinite;
+}
+
+/* Different Petal Sizes */
+.petals span:nth-child(odd) {
+    width: 18px;
+    height: 18px;
+}
+
+.petals span:nth-child(even) {
+    width: 26px;
+    height: 26px;
+}
+
+/* Individual Positions + Timing */
+
+.petals span:nth-child(1) {
+    left: 5%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+
+.petals span:nth-child(2) {
+    left: 15%;
+    animation-duration: 18s;
+    animation-delay: 2s;
+}
+
+.petals span:nth-child(3) {
+    left: 28%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.petals span:nth-child(4) {
+    left: 40%;
+    animation-duration: 20s;
+    animation-delay: 5s;
+}
+
+.petals span:nth-child(5) {
+    left: 52%;
+    animation-duration: 16s;
+    animation-delay: 3s;
+}
+
+.petals span:nth-child(6) {
+    left: 65%;
+    animation-duration: 22s;
+    animation-delay: 2s;
+}
+
+.petals span:nth-child(7) {
+    left: 78%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+}
+
+.petals span:nth-child(8) {
+    left: 90%;
+    animation-duration: 19s;
+    animation-delay: 1s;
+}
+
+/* Realistic Drift Animation */
+
+@keyframes sakuraFall {
+
+    0% {
+        transform:
+            translateX(0px) translateY(-10vh) rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    25% {
+        transform:
+            translateX(40px) translateY(25vh) rotate(90deg);
+    }
+
+    50% {
+        transform:
+            translateX(-30px) translateY(50vh) rotate(180deg);
+    }
+
+    75% {
+        transform:
+            translateX(50px) translateY(75vh) rotate(270deg);
+    }
+
+    100% {
+        transform:
+            translateX(-20px) translateY(110vh) rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 120px 60px;
+
+    background: #0d0d0d;
+
+    flex-wrap: wrap;
+}
+
+/* About Image */
+.about-image img {
+    width: 450px;
+
+    max-width: 100%;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 20px rgba(255, 79, 216, 0.3),
+        0 0 50px rgba(255, 79, 216, 0.2);
+
+    transition: 0.4s;
+}
+
+/* Hover Effect */
+.about-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Content */
+.about-content {
+    max-width: 550px;
+}
+
+/* Heading */
+.about-content h2 {
+    font-size: 52px;
+
+    margin-bottom: 25px;
+
+    color: #ff4fd8;
+
+    text-shadow:
+        0 0 10px #ff4fd8,
+        0 0 25px #ff4fd8;
+}
+
+/* Paragraphs */
+.about-content p {
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: #d6d6d6;
+
+    margin-bottom: 25px;
+}
+
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
+
+/* Hidden State */
+.reveal {
+    position: relative;
+
+    transform: translateY(80px);
+
+    opacity: 0;
+
+    transition:
+        all 1s ease;
+}
+
+/* Visible State */
+.reveal.active {
+    transform: translateY(0);
+
+    opacity: 1;
+}
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+#music-btn{
+  position:fixed;
+
+  bottom:30px;
+  right:30px;
+
+  z-index:2000;
+
+  padding:14px 22px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:rgba(0,0,0,0.7);
+
+  color:white;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 0 10px #ff7de3,
+    0 0 25px #ff7de3;
+
+  transition:0.3s;
+}
+
+/* Hover */
+#music-btn:hover{
+  transform:scale(1.08);
+
+  background:#ff7de3;
+
+  box-shadow:
+    0 0 20px #ff7de3,
+    0 0 50px #ff7de3;
+}

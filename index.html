@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sakura Brew Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2? family=Baloo+Paaji+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Sakura Petals -->
+<div class="petals">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+  
+  <!-- Navbar -->
+  <nav>
+    <h1>Sakura Brew</h1>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-content">
+      <h2>Welcome to Sakura Brew</h2>
+
+      <p>
+        Anime vibes, neon lights, and the best coffee in town.
+      </p>
+
+      <button>Enter Café</button>
+    </div>
+
+  </section>
+  <!-- About Section -->
+<section class="about reveal">
+
+  <div class="about-image">
+    <img src="https://unsplash.com/photos/pink-cherry-blossom-tree-under-blue-sky-during-daytime-ab-Yr2Rq2aI" alt="Anime Cafe">
+  </div>
+
+  <div class="about-content">
+
+    <h2>About Sakura Brew</h2>
+
+    <p>
+      Sakura Brew is inspired by the peaceful anime cafés of Tokyo.
+      A place where soft neon lights, lo-fi music, manga shelves,
+      and warm coffee create the perfect late-night atmosphere.
+    </p>
+
+    <p>
+      Whether you're watching anime, studying quietly,
+      or spending time with friends, Sakura Brew
+      gives you a cozy cinematic experience.
+    </p>
+
+    <button>Read More</button>
+
+  </div>
+
+</section>
+   <!-- Menu Section -->
+<section class="menu reveal">
+
+  <h2>Our Special Menu</h2>
+
+  <div class="menu-container">
+
+    <!-- Card 1 -->
+    <div class="card reveal">
+      <img src="https://unsplash.com/photos/a-cappuccino-on-a-saucer-on-a-tiled-floor-ujIHNKDzSwE" alt="Coffee">
+
+      <h3>Neon Latte</h3>
+
+      <p>
+        Smooth coffee with glowing anime café vibes.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card reveal">
+      <img src="https://unsplash.com/photos/hand-holding-a-refreshing-bubble-tea-OFPGkd2swUM" alt="Drink">
+
+      <h3>Sakura Bubble Tea</h3>
+
+      <p>
+        Sweet cherry blossom flavor with soft pearls.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card reveal">
+      <img src="https://unsplash.com/photos/a-piece-of-fruit-sitting-on-top-of-a-cutting-board-rSRrCpTHgGI" alt="Dessert">
+
+      <h3>Otaku Dessert</h3>
+
+      <p>
+        Anime-inspired dessert made for late-night vibes.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+      <script>
+
+window.addEventListener('scroll', reveal);
+
+function reveal(){
+
+  let reveals = document.querySelectorAll('.reveal');
+
+  for(let i = 0; i < reveals.length; i++){
+
+    let windowHeight = window.innerHeight;
+
+    let revealTop = reveals[i].getBoundingClientRect().top;
+
+    let revealPoint = 100;
+
+    if(revealTop < windowHeight - revealPoint){
+
+      reveals[i].classList.add('active');
+
+    }
+
+  }
+
+}
+
+</script>
+
+ <script>
+
+/* Music Toggle */
+
+const music = document.getElementById('bg-music');
+
+const musicBtn = document.getElementById('music-btn');
+
+let isPlaying = false;
+
+musicBtn.addEventListener('click', () => {
+
+  if(isPlaying){
+
+    music.pause();
+
+    musicBtn.innerHTML = '🎵Play Music';
+
+  } else {
+
+    music.play();
+
+    musicBtn.innerHTML = '⏸Pause Music';
+
+  }
+
+  isPlaying = !isPlaying;
+
+});
+
+</script>
+      <!-- Background Music -->
+<audio id="bg-music" loop>
+  <source src="lofi.mp3" type="audio/mp3">
+</audio>
+
+<!-- Music Toggle Button -->
+<button id="music-btn">
+  🎵Play Music
+</button>
+</body>
+</html>
+     
